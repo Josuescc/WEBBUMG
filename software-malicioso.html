@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6. Software Malicioso - Redes y Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-open"></i> Redes y Tecnología
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#temas" class="active">Artículos</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+        
+        <h1 class="article-title">6. Seguridad Informática: Tipos y Amenazas de Software Malicioso</h1>
+        <p class="article-meta"><i class="fa-regular fa-calendar"></i> 31 de mayo de 2026 | <i class="fa-regular fa-folder"></i> Seguridad Digital</p>
+
+        <div class="article-banner" style="background: #1e293b; padding: 25px; border-radius: 8px; border-left: 5px solid #f43f5e; display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">El <strong>Software Malicioso</strong>, también ampliamente conocido como <strong>Malware</strong>, es cualquier tipo de programa o código informático diseñado específicamente para dañar, alterar, acceder sin autorización o realizar operaciones no deseadas dentro de un sistema informático comprometido.</p>
+                </div>
+                <div style="font-size: 3rem; color: #f43f5e; display: flex; gap: 15px; flex-shrink: 0;">
+                    <i class="fa-solid fa-shield-virus"></i>
+                    <i class="fa-solid fa-skull-crossbones"></i>
+                </div>
+            </div>
+
+            <div style="width: 100%; background: #0f172a; border-radius: 6px; padding: 20px; border: 1px solid #334155; margin-top: 10px; box-sizing: border-box;">
+                <div style="text-align: center; color: #f43f5e; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Ciclo de Impacto de una Infección por Malware
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: monospace; font-size: 0.85rem;">
+                    <div style="background: #1e293b; padding: 10px; border: 1px solid #334155; border-radius: 4px; color: #cbd5e1; text-align: center;">Infiltración<br><span style="color: #64748b; font-size: 0.75rem;">Engaño / Vulnerabilidad</span></div>
+                    <div style="color: #f43f5e; font-size: 1.2rem;"><i class="fa-solid fa-angles-right"></i></div>
+                    <div style="background: #7f1d1d; padding: 10px; border-radius: 4px; color: white; text-align: center; min-width: 120px; font-weight: bold; border: 1px solid #b91c1c;">Ejecución Activa<br><span style="font-size: 0.7rem; font-weight: normal; color: #fca5a5;">Cifrado o Extracción</span></div>
+                    <div style="color: #f43f5e; font-size: 1.2rem;"><i class="fa-solid fa-angles-right"></i></div>
+                    <div style="background: #1e293b; padding: 10px; border: 1px solid #334155; border-radius: 4px; color: #cbd5e1; text-align: center; min-width: 110px;">Pérdida de Control<br><span style="color: #94a3b8; font-size: 0.75rem;">Sistema Comprometido</span></div>
+                </div>
+                <span style="display: block; margin-top: 15px; font-size: 0.85rem; color: #94a3b8; text-align: center;"><i class="fa-solid fa-circle-info"></i> Esquema 1: Flujo generalizado de cómo un código malicioso vulnera las capas operativas para tomar el control de los recursos o datos.</span>
+            </div>
+        </div>
+
+        <section class="content-block" style="margin-top: 40px;">
+            <h3><i class="fa-solid fa-mask icon-block"></i> Principales Amenazas a la Privacidad y la Información</h3>
+            <p>De acuerdo con el análisis de la arquitectura de sistemas informáticos, las infecciones de malware se categorizan según su comportamiento y objetivos económicos o destructivos:</p>
+            
+            <ul style="margin: 20px 0 20px 20px; color: #cbd5e1; list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #ef4444;">
+                    <strong>Ransomware:</strong> Es uno de los ataques más agresivos. Se encarga de cifrar por completo los archivos confidenciales del sistema o bloquear el acceso total a la máquina, exigiendo posteriormente un pago o rescate financiero (comúnmente solicitado en criptomonedas) para entregar la clave de restauración.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #38bdf8;">
+                    <strong>Spyware:</strong> Este software está diseñado minuciosamente para recolectar información, historiales, credenciales y datos sobre todas las actividades de los usuarios sin su conocimiento ni consentimiento explícito, enviándola de manera oculta a servidores externos.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #eab308;">
+                    <strong>Adware:</strong> Tipo de código malicioso cuya función principal radica en inundar el sistema operativo infectado con anuncios, ventanas emergentes y publicidad masiva no deseada, ralentizando severamente la navegación y los procesos informáticos.
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-bug icon-block"></i> Mecanismos de Infección y Replicación Estructural</h3>
+            <p>Otras variantes se enfocan en aprovechar las redes globales y la manipulación de archivos legítimos para lograr persistencia e infiltración:</p>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #1e293b; border: 1px solid #334155; border-radius: 6px; overflow: hidden;">
+                <thead>
+                    <tr style="background-color: #0f172a; border-bottom: 2px solid #334155; text-align: left;">
+                        <th style="padding: 12px; color: #f43f5e; font-weight: bold;">Variante de Malware</th>
+                        <th style="padding: 12px; color: #cbd5e1; font-weight: bold;">Comportamiento Técnico Interno</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #334155;">
+                        <td style="padding: 12px; font-weight: bold; color: #38bdf8;"><i class="fa-solid fa-spider"></i> Gusanos (Worms)</td>
+                        <td style="padding: 12px; color: #cbd5e1;">A diferencia de otros virus convencionales, no requieren infectar archivos existentes para propagarse. Tienen la capacidad autónoma de replicarse a sí mismos continuamente y viajar a través de las interfaces de red locales para colapsar otros nodos.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #334155; background-color: #162032;">
+                        <td style="padding: 12px; font-weight: bold; color: #38bdf8;"><i class="fa-solid fa-horse"></i> Troyanos (Trojans)</td>
+                        <td style="padding: 12px; color: #cbd5e1;">Programas maliciosos que se camuflan bajo una apariencia completamente legítima, inofensiva o útil. Una vez que el usuario les concede permisos de ejecución, abren una puerta trasera (backdoor) para dar acceso absoluto a atacantes externos.</td>
+                    </tr>
+                    <tr style="background-color: #1e293b;">
+                        <td style="padding: 12px; font-weight: bold; color: #38bdf8;"><i class="fa-solid fa-robot"></i> Bots Maliciosos</td>
+                        <td style="padding: 12px; color: #cbd5e1;">Aplicaciones programadas para automatizar tareas repetitivas conectadas a una red. Al infectar una máquina, la transforman en un "zombi", haciéndola formar parte de una red controlada de forma remota (Botnet) para orquestar ataques masivos de denegación de servicio.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-block" style="margin-top: 40px; text-align: center;">
+            <h3><i class="fa-solid fa-image icon-block"></i>Malware</h3>
+            <p></p>
+            
+            <div style="width: 100%; max-width: 750px; margin: 20px auto 0 auto; border-radius: 6px; overflow: hidden; border: 1px solid #334155; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <img src="imagenes/malware.png" alt="Esquemas analíticos de ciberseguridad y malware" style="width: 100%; height: auto; display: block;">
+                <span style="display: block; background: #0f172a; padding: 10px; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+                    <i class="fa-solid fa-circle-check"></i> 
+                </span>
+            </div>
+        </section>
+
+        <section class="content-block" style="margin-top: 40px;">
+    <h3><i class="fa-solid fa-terminal icon-block"></i> Herramienta Interactiva: Analizador de Vectores de Malware</h3>
+    <p>Interactúa con este simulador basado en JavaScript para evaluar el estado lógico y simular la detección de hilos sospechosos en el sistema:</p>
+
+    <div style="background: #090d16; border: 1px solid #334155; border-radius: 6px; font-family: monospace; overflow: hidden; max-width: 650px; margin: 20px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+        <div style="background: #1e293b; padding: 10px 15px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #334155;">
+            <span style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%; display: inline-block;"></span>
+            <span style="width: 12px; height: 12px; background: #eab308; border-radius: 50%; display: inline-block;"></span>
+            <span style="width: 12px; height: 12px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+            <span style="color: #94a3b8; font-size: 0.8rem; margin-left: 10px;">ciberseguridad_core.js</span>
+        </div>
+        
+        <div id="pantalla-terminal" style="padding: 20px; height: 220px; overflow-y: auto; color: #10b981; font-size: 0.9rem; line-height: 1.5; text-align: left;">
+            <span style="color: #64748b;">[Sistema listo. Presiona el botón inferior para iniciar el escaneo heurístico...]</span>
+        </div>
+
+        <div style="background: #162032; padding: 15px; border-top: 1px solid #334155; text-align: center;">
+            <button id="btn-escanear" onclick="ejecutarEscaneo()" style="background: #f43f5e; color: white; border: none; padding: 10px 20px; font-family: monospace; font-size: 0.9rem; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s ease;">
+                <i class="fa-solid fa-play"></i> INICIAR ANÁLISIS HEURÍSTICO
+            </button>
+        </div>
+    </div>
+</section>
+<script>
+function ejecutarEscaneo() {
+    const pantalla = document.getElementById('pantalla-terminal');
+    const boton = document.getElementById('btn-escanear');
+    
+    // Deshabilitar botón durante el proceso
+    boton.disabled = true;
+    boton.style.background = '#475569';
+    boton.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ESCANEANDO CAPAS...';
+    
+    // Limpiar pantalla e iniciar logs secuenciales
+    pantalla.innerHTML = '';
+    
+    const logs = [
+        { texto: '➜ Iniciando analizador de procesos lógicos...', color: '#38bdf8' },
+        { texto: '➜ Verificando integridad del Bootloader y Kernel... OK', color: '#cbd5e1' },
+        { texto: '➜ Escaneando puertos de red abiertos buscando Worms activos...', color: '#cbd5e1' },
+        { texto: '⚠️ ALERTA: Puerto inusual detectado enviando ráfagas redundantes de datos.', color: '#eab308' },
+        { texto: '➜ Rastreando firma hexadecimal en bloques de memoria RAM...', color: '#cbd5e1' },
+        { texto: '❌ CRÍTICO: Patrón de cifrado sospechoso identificado como [Ransomware.Payload]', color: '#ef4444' },
+        { texto: '➜ Ejecutando protocolo de aislamiento preventivo de sockets...', color: '#38bdf8' },
+        { texto: '✔ Proceso malicioso contenido con éxito. Sistema seguro temporalmente.', color: '#10b981' }
+    ];
+    
+    let i = 0;
+    
+    function imprimirLinea() {
+        if (i < logs.length) {
+            const linea = document.createElement('div');
+            linea.style.color = logs[i].color;
+            linea.style.marginBottom = '6px';
+            linea.innerHTML = logs[i].texto;
+            pantalla.appendChild(linea);
+            
+            // Auto-scroll hacia abajo
+            pantalla.scrollTop = pantalla.scrollHeight;
+            
+            i++;
+            setTimeout(imprimirLinea, 1200); // Imprime una línea cada 1.2 segundos
+        } else {
+            // Reestablecer botón al terminar
+            boton.disabled = false;
+            boton.style.background = '#f43f5e';
+            boton.innerHTML = '<i class="fa-solid fa-rotate-right"></i> REPETIR ANÁLISIS';
+        }
+    }
+    
+    imprimirLinea();
+}
+</script>
+        <section class="reflection-block" style="border-left: 4px solid #f43f5e; background: #1e293b; padding: 20px; border-radius: 0 8px 8px 0; margin-top: 40px;">
+            <h3><i class="fa-solid fa-lightbulb icon-block"></i> ¿Por qué elegí este tema y dónde se aplica?</h3>
+            <p><strong>Mi perspectiva:</strong> Estudiar la naturaleza del software malicioso me parece crucial dentro del perfil informático, ya que el diseño de código robusto siempre debe ir acompañado de la prevención de vulnerabilidades. Entender cómo operan las troyanizaciones, los gusanos y el ransomware nos da la pauta técnica para implementar políticas estrictas de cifrado y mecanismos defensivos eficientes.</p>
+            <p style="margin-top: 10px;"><strong>¿Dónde se aplica?</strong> Se aplica directamente en el desarrollo seguro de software (DevSecOps), auditorías preventivas de infraestructura, administración y securización de redes corporativas, configuración de políticas internas de firewall/antivirus y diseño de esquemas de respaldo de datos de alta disponibilidad.</p>
+        </section>
+
+        <div class="article-navigation" style="display: flex; justify-content: space-between; margin-top: 50px; padding-top: 20px; border-top: 1px solid #334155;">
+            <a href="hardware-software.html" class="nav-btn">&larr; Artículo Anterior (Hardware y Software)</a>
+            <a href="html-estructura.html" class="nav-btn">Siguiente Artículo (Programación en Python) &rarr;</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            &copy; 2026 Redes y Tecnología - Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>

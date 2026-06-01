@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases de Datos - Redes y Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-open"></i> Redes y Tecnología
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#temas" class="active">Artículos</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+        
+        <h1 class="article-title">2. Estructuración de Datos: Llaves y Diagramas en SQL</h1>
+        <p class="article-meta"><i class="fa-regular fa-calendar"></i> 30 de mayo de 2026 | <i class="fa-regular fa-folder"></i> Gestión de Archivos</p>
+
+        <div class="article-banner" style="background: #1e293b; padding: 25px; border-radius: 8px; border-left: 5px solid #38bdf8; display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">Para diseñar una base de datos estable, no basta con crear tablas al azar. Primero debemos dibujar un <strong>diagrama de flujo o entidad-relación</strong> que sirva como mapa visual, y luego definir los identificadores únicos que conectarán toda nuestra información.</p>
+                </div>
+                <div style="font-size: 3rem; color: #38bdf8; display: flex; gap: 15px; flex-shrink: 0;">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+            </div>
+
+            <div style="width: 100%; background: #0f172a; border-radius: 6px; padding: 20px; border: 1px solid #334155; margin-top: 10px; box-sizing: border-box;">
+                <div style="text-align: center; color: #38bdf8; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                    <i class="fa-solid fa-project-diagram"></i> Diagrama de Flujo de Datos (Registro de Alumnos)
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: monospace; font-size: 0.85rem;">
+                    <div style="background: #ef4444; padding: 10px; border-radius: 4px; color: white; text-align: center; min-width: 120px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Formulario Web (Input)</div>
+                    <div style="color: #64748b; font-size: 1.5rem;"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div style="background: #eab308; padding: 10px; border-radius: 4px; color: #0f172a; font-weight: bold; text-align: center; min-width: 140px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Validar PK Única</div>
+                    <div style="color: #64748b; font-size: 1.5rem;"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div style="background: #10b981; padding: 10px; border-radius: 4px; color: white; text-align: center; min-width: 150px; border: 2px dashed #34d399; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">Tabla: Alumnos [Almacén]</div>
+                </div>
+                <span style="display: block; margin-top: 15px; font-size: 0.85rem; color: #94a3b8; text-align: center;"><i class="fa-solid fa-circle-info"></i> Esquema 1: Flujo de control lógico que sigue una petición SQL desde la captura hasta la persistencia.</span>
+            </div>
+        </div>
+
+        <section class="content-block" style="margin-top: 40px;">
+            <h3><i class="fa-solid fa-key icon-block"></i> Llaves Primarias y Secundarias (Foráneas)</h3>
+            <p>En el estándar de las bases de datos relacionales, las tablas necesitan comunicarse entre sí de forma ordenada. Para lograrlo sin errores ni datos duplicados, utilizamos dos tipos esenciales de identificadores:</p>
+            
+            <ul style="margin: 20px 0 20px 20px; color: #cbd5e1; list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #38bdf8;">
+                    <strong>Llave Primaria (Primary Key - PK):</strong> Es el campo que identifica de forma **única e irrepetible** a cada fila de una tabla. No puede haber dos registros con la misma llave primaria, ni tampoco puede quedarse vacía. Un ejemplo perfecto es el número de <i>Carnet</i> de un estudiante o el CUI.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #a855f7;">
+                    <strong>Llave Foránea o Secundaria (Foreign Key - FK):</strong> Es una columna dentro de una tabla que hace referencia directa a la Llave Primaria de **otra tabla**. Su función es crear un vínculo o "relación" legal entre ambas. Por ejemplo, en una lista de <i>Inscripciones</i>, colocamos el carnet del alumno para saber a quién le pertenece ese registro sin tener que volver a escribir todo su nombre.
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-sitemap icon-block"></i> Primera Galería: Modelado de Relaciones (E-R)</h3>
+            <p>A continuación se representa la arquitectura relacional básica de dos entidades escolares vinculadas mediante sus llaves lógicas:</p>
+            
+            <div style="display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; justify-content: center; font-family: monospace; box-sizing: border-box;">
+                
+                <div style="flex: 1; min-width: 250px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <div style="background: #38bdf8; padding: 8px; color: #0f172a; font-weight: bold; text-align: center;"><i class="fa-solid fa-table"></i> TABLA: Alumnos</div>
+                    <div style="padding: 12px; color: #cbd5e1; font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+                        <div style="background: #1e293b; padding: 6px; border-radius: 4px; border-left: 3px solid #38bdf8;">🔑 carnet [INT] &lt;PK&gt;</div>
+                        <div style="padding: 4px;">• nombre [VARCHAR]</div>
+                        <div style="padding: 4px;">• carrera [VARCHAR]</div>
+                    </div>
+                    <p style="padding: 8px; margin: 0; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #334155; text-align: center;">Entidad Fuerte (Base de alumnos)</p>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: center; color: #a855f7; font-size: 1.5rem; min-width: 40px;">
+                    <i class="fa-solid fa-link" title="Relación de 1 a Muchos"></i>
+                </div>
+
+                <div style="flex: 1; min-width: 250px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <div style="background: #a855f7; padding: 8px; color: white; font-weight: bold; text-align: center;"><i class="fa-solid fa-table"></i> TABLA: Inscripciones</div>
+                    <div style="padding: 12px; color: #cbd5e1; font-size: 0.85rem; display: flex; flex-direction: column; gap: 8px;">
+                        <div style="background: #1e293b; padding: 6px; border-radius: 4px; border-left: 3px solid #a855f7;">🔑 id_inscripcion [INT] &lt;PK&gt;</div>
+                        <div style="background: #1e293b; padding: 6px; border-radius: 4px; border-left: 3px solid #38bdf8;">🔗 fk_carnet [INT] &lt;FK&gt;</div>
+                        <div style="padding: 4px;">• curso [VARCHAR]</div>
+                    </div>
+                    <p style="padding: 8px; margin: 0; font-size: 0.75rem; color: #94a3b8; border-top: 1px solid #334155; text-align: center;">Entidad Débil (Depende del alumno)</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-code icon-block"></i> Implementación en Código SQL</h3>
+            <p>Para trasladar nuestro diagrama al software, escribimos las instrucciones en lenguaje SQL especificando qué columna será nuestra Llave Primaria (`PRIMARY KEY`):</p>
+            
+            <pre style="background: #0f172a; padding: 15px; border-radius: 6px; border: 1px solid #334155; color: #a7f3d0; font-family: monospace; font-size: 0.9rem; overflow-x: auto; margin: 15px 0;">
+CREATE TABLE Alumnos (
+    carnet INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    carrera VARCHAR(50)
+);</pre>
+
+            <p style="margin-top: 15px;">Con esta regla establecida, si intentamos ingresar por error a dos alumnos con el mismo número de carnet, el motor SQL bloqueará la acción inmediatamente protegiendo la integridad de la base de datos.</p>
+            
+            <p style="margin-top: 15px;">Acompañamos la estructura adaptativa integrando tres pequeños bloques lógicos de consulta que representan el flujo analítico de instrucciones de bases de datos:</p>
+
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; box-sizing: border-box;">
+                <div style="flex: 1; min-width: 150px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; text-align: center; font-family: monospace; font-size: 0.8rem; border-top: 3px solid #10b981;">
+                    <div style="color: #10b981; font-weight: bold; margin-bottom: 5px;">[ SELECT ]</div>
+                    <span style="color: #94a3b8;">Instrucción lúdica de lectura y extracción.</span>
+                </div>
+                <div style="flex: 1; min-width: 150px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; text-align: center; font-family: monospace; font-size: 0.8rem; border-top: 3px solid #38bdf8;">
+                    <div style="color: #38bdf8; font-weight: bold; margin-bottom: 5px;">[ INSERT ]</div>
+                    <span style="color: #94a3b8;">Inserción y persistencia de tuplas lógicas.</span>
+                </div>
+                <div style="flex: 1; min-width: 150px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; text-align: center; font-family: monospace; font-size: 0.8rem; border-top: 3px solid #f43f5e;">
+                    <div style="color: #f43f5e; font-weight: bold; margin-bottom: 5px;">[ CONSTRAINT ]</div>
+                    <span style="color: #94a3b8;">Reglas de validación para las llaves primarias.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-table-list icon-block"></i> Ejemplo Visual de la Tabla resultante</h3>
+            <p>Así es como se representa de forma gráfica y ordenada la información ingresada, destacando la columna que actúa como núcleo identificador:</p>
+            
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px; background-color: #1e293b; border: 1px solid #334155; border-radius: 6px; overflow: hidden;">
+                <thead>
+                    <tr style="background-color: #0f172a; border-bottom: 2px solid #334155; text-align: left;">
+                        <th style="padding: 12px; color: #38bdf8; font-weight: bold;"><i class="fa-solid fa-key"></i> carnet (Llave Primaria)</th>
+                        <th style="padding: 12px; color: #cbd5e1; font-weight: bold;">nombre</th>
+                        <th style="padding: 12px; color: #cbd5e1; font-weight: bold;">carrera</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #334155;">
+                        <td style="padding: 12px; font-family: monospace; color: #38bdf8; font-weight: bold;">2026001</td>
+                        <td style="padding: 12px; color: #cbd5e1;">Henry Vasquez</td>
+                        <td style="padding: 12px; color: #cbd5e1;">Ingeniería en Sistemas</td>
+                    </tr>
+                    <tr style="background-color: #162032;">
+                        <td style="padding: 12px; font-family: monospace; color: #38bdf8; font-weight: bold;">2026002</td>
+                        <td style="padding: 12px; color: #cbd5e1;">Carlos López</td>
+                        <td style="padding: 12px; color: #cbd5e1;">Ingeniería en Sistemas</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-block" style="margin-top: 40px; text-align: center;">
+            <h3><i class="fa-solid fa-camera icon-block"></i> Evidencia Final del Laboratorio</h3>
+            <p>Esta es la captura final de la base de datos corriendo en la consola local:</p>
+            
+            <div style="width: 100%; max-width: 700px; margin: 20px auto 0 auto; border-radius: 6px; overflow: hidden; border: 1px solid #334155; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <img src="imagenes/mi-captura-final.png" alt="Consola SQL con las tablas creadas con éxito" style="width: 100%; height: auto; display: block;">
+                <span style="display: block; background: #0f172a; padding: 10px; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+                    <i class="fa-solid fa-terminal"></i> Captura de pantalla: Tablas y llaves verificadas en el gestor.
+                </span>
+            </div>
+        </section>
+        <section class="content-block" style="margin-top: 40px;">
+    <h3><i class="fa-solid fa-code icon-block"></i> Herramienta Interactiva: Constructor de Restricciones SQL (Constraints)</h3>
+    <p>Prueba cómo las reglas de integridad que definimos en los diagramas se transforman en código estructurado. Selecciona las propiedades y JavaScript compilará la sentencia DDL automáticamente:</p>
+
+    <div style="background: #090d16; border: 1px solid #334155; border-radius: 6px; padding: 20px; max-width: 650px; margin: 20px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5); box-sizing: border-box; font-family: monospace;">
+        
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+            <div style="flex: 1; min-width: 140px;">
+                <label style="color: #a855f7; display: block; margin-bottom: 5px; font-size: 0.85rem;">Nombre Campo:</label>
+                <input type="text" id="sql-col" value="id_usuario" oninput="generarSQL()" style="width: 100%; background: #162032; border: 1px solid #334155; padding: 8px; color: white; border-radius: 4px; box-sizing: border-box; outline: none;">
+            </div>
+            <div style="flex: 1; min-width: 140px;">
+                <label style="color: #a855f7; display: block; margin-bottom: 5px; font-size: 0.85rem;">Tipo de Dato:</label>
+                <select id="sql-tipo" onchange="generarSQL()" style="width: 100%; background: #162032; border: 1px solid #334155; padding: 8px; color: white; border-radius: 4px; box-sizing: border-box; outline: none;">
+                    <option value="INT">INT (Entero)</option>
+                    <option value="VARCHAR(100)">VARCHAR (Texto)</option>
+                    <option value="DECIMAL(10,2)">DECIMAL (Moneda/Decimal)</option>
+                </select>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; color: #cbd5e1; font-size: 0.9rem;">
+            <label style="cursor: pointer;"><input type="checkbox" id="sql-pk" checked onchange="generarSQL()"> PRIMARY KEY</label>
+            <label style="cursor: pointer;"><input type="checkbox" id="sql-nn" checked onchange="generarSQL()"> NOT NULL</label>
+        </div>
+
+        <div style="text-align: left;">
+            <span style="color: #10b981; font-size: 0.85rem; display: block; margin-bottom: 5px;"><i class="fa-solid fa-terminal"></i> SENTENCIA SQL GENERADA DINÁMICAMENTE:</span>
+            <div id="pantalla-sql" style="background: #020617; border: 1px solid #1e293b; padding: 15px; border-radius: 4px; color: #a7f3d0; min-height: 60px; font-size: 0.95rem; line-height: 1.5; overflow-x: auto; white-space: pre;"></div>
+        </div>
+    </div>
+</section>
+<script>
+function generarSQL() {
+    const col = document.getElementById('sql-col').value.trim() || 'columna';
+    const tipo = document.getElementById('sql-tipo').value;
+    const isPk = document.getElementById('sql-pk').checked;
+    const isNn = document.getElementById('sql-nn').checked;
+    const pantalla = document.getElementById('pantalla-sql');
+    
+    let constraint = "";
+    if (isPk) constraint += " PRIMARY KEY";
+    if (isNn) constraint += " NOT NULL";
+    
+    let codigo = `CREATE TABLE Tbl_Ejemplo (\n    ${col} ${tipo}${constraint}\n);`;
+    pantalla.innerHTML = codigo;
+}
+// Ejecutar una vez al cargar la página
+generarSQL();
+</script>
+
+        <section class="reflection-block" style="border-left: 4px solid #38bdf8; background: #1e293b; padding: 20px; border-radius: 0 8px 8px 0; margin-top: 40px;">
+            <h3><i class="fa-solid fa-lightbulb icon-block"></i> ¿Por qué elegí este tema y dónde se aplica?</h3>
+            <p><strong>Mi perspectiva:</strong> Elegí este tema porque me llama mucho la atención cómo se ordena la información de manera lógica. Dibujar diagramas de flujo y luego estructurar las llaves primarias para asegurar que ningún registro se confunda o se pierda en el sistema es una de las partes más interesantes del desarrollo.</p>
+            <p style="margin-top: 10px;"><strong>¿Dónde se aplica?</strong> Se aplica de forma directa en los sistemas de control de asignaciones universitarios, en los servidores de juegos que enlazan tu inventario con tu ID de usuario único, y en cualquier plataforma digital que deba guardar datos enlazados de forma segura.</p>
+        </section>
+
+        <div class="article-navigation" style="display: flex; justify-content: space-between; margin-top: 50px; padding-top: 20px; border-top: 1px solid #334155;">
+            <a href="modelo-osi.html" class="nav-btn">&larr; Artículo Anterior (Modelo OSI)</a>
+            <a href="hardware-software.html" class="nav-btn">Siguiente Artículo (Hardware y Software) &rarr;</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            &copy; 2026 Redes y Tecnología - Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>

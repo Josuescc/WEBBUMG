@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4. Redes de Computadoras - Redes y Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-open"></i> Redes y Tecnología
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#temas" class="active">Artículos</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+        
+        <h1 class="article-title">4. Redes de Computadoras: Fundamentos y Conectividad Física</h1>
+        <p class="article-meta"><i class="fa-regular fa-calendar"></i> 31 de mayo de 2026 | <i class="fa-regular fa-folder"></i> Telecomunicaciones</p>
+
+        <div class="article-banner" style="background: #1e293b; padding: 25px; border-radius: 8px; border-left: 5px solid #38bdf8; display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">Una <strong>red de computadoras</strong> es un conjunto de equipos interconectados que comparten información, recursos y servicios. Desde una pequeña red doméstica hasta la infraestructura global de Internet, su diseño depende de reglas lógicas de distribución y medios físicos de transmisión.</p>
+                </div>
+                <div style="font-size: 3rem; color: #38bdf8; display: flex; gap: 15px; flex-shrink: 0;">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <i class="fa-solid fa-circle-nodes"></i>
+                </div>
+            </div>
+
+            <div style="width: 100%; background: #0f172a; border-radius: 6px; padding: 20px; border: 1px solid #334155; margin-top: 10px; box-sizing: border-box;">
+                <div style="text-align: center; color: #38bdf8; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                    <i class="fa-solid fa-server"></i> Arquitectura de Red: Cliente - Servidor
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; font-family: monospace; font-size: 0.85rem;">
+                    <div style="background: #1e293b; padding: 10px; border: 1px solid #334155; border-radius: 4px; color: #cbd5e1; text-align: center;"><i class="fa-solid fa-desktop"></i> Cliente (PC)<br><span style="color: #64748b; font-size: 0.75rem;">Petición de Servicio</span></div>
+                    <div style="color: #38bdf8; font-size: 1.2rem;"><i class="fa-solid fa-right-left"></i></div>
+                    <div style="background: #0284c7; padding: 12px; border-radius: 6px; color: white; font-weight: bold; text-align: center; min-width: 130px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #0369a1;">
+                        <i class="fa-solid fa-cloud"></i> INTERNET / LAN<br><span style="font-size: 0.7rem; font-weight: normal; color: #e0f2fe;">Medio de Transporte</span>
+                    </div>
+                    <div style="color: #38bdf8; font-size: 1.2rem;"><i class="fa-solid fa-right-left"></i></div>
+                    <div style="background: #10b981; padding: 10px; border: 1px solid #334155; border-radius: 4px; color: white; text-align: center;"><i class="fa-solid fa-database"></i> Servidor<br><span style="color: #a7f3d0; font-size: 0.75rem;">Procesa y Responde</span></div>
+                </div>
+                <span style="display: block; margin-top: 15px; font-size: 0.85rem; color: #94a3b8; text-align: center;"><i class="fa-solid fa-circle-info"></i> Esquema 1: Flujo centralizado de datos donde los clientes solicitan recursos y un nodo central centraliza la respuesta.</span>
+            </div>
+        </div>
+
+        <section class="content-block" style="margin-top: 40px;">
+            <h3><i class="fa-solid fa-globe icon-block"></i> Clasificación de Redes según su Alcance Geográfico</h3>
+            <p>La extensión territorial que cubre una red define su infraestructura tecnológica y su propósito específico:</p>
+            
+            <ul style="margin: 20px 0 20px 20px; color: #cbd5e1; list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #38bdf8;">
+                    <strong>PAN (Personal Area Network):</strong> Red de pocos metros para uso personal. Conecta dispositivos cercanos como teléfonos, audífonos inalámbricos o relojes inteligentes mediante Bluetooth.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #10b981;">
+                    <strong>LAN (Local Area Network):</strong> Red de área local confinada a un espacio limitado como una casa, oficina o el laboratorio de la universidad. Utiliza cables UTP o redes Wi-Fi (WLAN) para compartir archivos e impresoras a gran velocidad.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #eab308;">
+                    <strong>MAN (Metropolitan Area Network):</strong> Red de alta velocidad que cubre un municipio o una ciudad entera, interconectando múltiples redes LAN dispersas (por ejemplo, sucursales bancarias o campus universitarios distribuidos).
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #f43f5e;">
+                    <strong>WAN (Wide Area Network):</strong> Red de gran alcance que cubre países o continentes enteros. Utiliza enlaces satelitales o cables submarinos de fibra óptica. El ejemplo más grande y conocido de una red WAN es Internet.
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-sitemap icon-block"></i> Topologías de Red: Distribución Geométrica</h3>
+            <p>La topología es el mapa físico o lógico que define cómo se organizan y conectan los cables y los nodos de un sistema de red:</p>
+            
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; font-family: monospace; box-sizing: border-box; justify-content: center;">
+                
+                <div style="flex: 1; min-width: 220px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 15px; text-align: center;">
+                    <div style="color: #38bdf8; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-star"></i></div>
+                    <div style="font-weight: bold; color: #cbd5e1; margin-bottom: 5px;">Topología en Estrella</div>
+                    <span style="color: #94a3b8; font-size: 0.8rem;">Todas las PCs van conectadas a un nodo central (Switch). Si una PC falla, la red sigue activa. Es la más usada.</span>
+                </div>
+
+                <div style="flex: 1; min-width: 220px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 15px; text-align: center;">
+                    <div style="color: #10b981; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-grip-lines"></i></div>
+                    <div style="font-weight: bold; color: #cbd5e1; margin-bottom: 5px;">Topología en Bus</div>
+                    <span style="color: #94a3b8; font-size: 0.8rem;">Los dispositivos comparten un único cable central o "troncal". Si el cable principal se rompe, toda la red se cae.</span>
+                </div>
+
+                <div style="flex: 1; min-width: 220px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 15px; text-align: center;">
+                    <div style="color: #a855f7; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-circle-notch"></i></div>
+                    <div style="font-weight: bold; color: #cbd5e1; margin-bottom: 5px;">Topología en Anillo</div>
+                    <span style="color: #94a3b8; font-size: 0.8rem;">Los datos viajan en una sola dirección formando un circuito cerrado. Cada nodo actúa como repetidor de señal.</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-tools icon-block"></i> Conectividad Física: Conectorización del Cable LAN (T568B)</h3>
+            <p>Para implementar estas topologías de forma física en redes locales, se requiere la fabricación de cables directos balanceados basados en la norma industrial de telecomunicaciones **T568B**:</p>
+
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; font-family: monospace; font-size: 0.8rem; box-sizing: border-box;">
+                <div style="flex: 1; min-width: 180px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: linear-gradient(45deg, #fff 50%, #ea580c 50%); border-radius: 2px; border:1px solid #475569;"></span> 1. Blanco / Naranja</div>
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: #ea580c; border-radius: 2px;"></span> 2. Naranja</div>
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: linear-gradient(45deg, #fff 50%, #16a34a 50%); border-radius: 2px; border:1px solid #475569;"></span> 3. Blanco / Verde</div>
+                </div>
+                <div style="flex: 1; min-width: 180px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: #2563eb; border-radius: 2px;"></span> 4. Azul</div>
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: linear-gradient(45deg, #fff 50%, #2563eb 50%); border-radius: 2px; border:1px solid #475569;"></span> 5. Blanco / Azul</div>
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: #16a34a; border-radius: 2px;"></span> 6. Verde</div>
+                </div>
+                <div style="flex: 1; min-width: 180px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: linear-gradient(45deg, #fff 50%, #78350f 50%); border-radius: 2px; border:1px solid #475569;"></span> 7. Blanco / Marrón</div>
+                    <div><span style="display:inline-block; width: 12px; height: 12px; background: #78350f; border-radius: 2px;"></span> 8. Marrón</div>
+                    <div style="color: #38bdf8; font-size: 0.75rem; border-top: 1px solid #334155; padding-top: 4px;"><i class="fa-solid fa-compress-arrows-alt"></i> Ponchar en Conector RJ45</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block" style="margin-top: 40px; text-align: center;">
+            <h3><i class="fa-solid fa-image icon-block"></i> Evidencia y Topología del Laboratorio</h3>
+            <p>A continuación se muestra el esquema técnico correspondiente a la práctica de configuración simulada:</p>
+            
+            <div style="width: 100%; max-width: 750px; margin: 20px auto 0 auto; border-radius: 6px; overflow: hidden; border: 1px solid #334155; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <img src="imagenes/redes.png" alt="Diagrama estructural y evidencias de redes locales" style="width: 100%; height: auto; display: block;">
+                <span style="display: block; background: #0f172a; padding: 10px; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+                    <i class="fa-solid fa-circle-check"></i> Captura de Pantalla: Topología de red enlazada y configurada por completo.
+                </span>
+            </div>
+        </section>
+        <section class="content-block" style="margin-top: 40px;">
+    <h3><i class="fa-solid fa-network-wired icon-block"></i> Herramienta Interactiva: Simulador de Modos de Transmisión</h3>
+    <p>En las redes de telecomunicaciones, los datos se distribuyen según el destino requerido. Selecciona un método de transmisión física para observar cómo el switch gestiona el tráfico en tiempo real:</p>
+
+    <div style="background: #090d16; border: 1px solid #334155; border-radius: 6px; padding: 20px; max-width: 650px; margin: 20px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5); box-sizing: border-box; font-family: monospace;">
+        
+        <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap;">
+            <button onclick="simularRed('unicast')" style="background: #1e293b; color: #38bdf8; border: 1px solid #38bdf8; padding: 8px 15px; font-family: monospace; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s;" id="btn-unicast">UNICAST (1 a 1)</button>
+            <button onclick="simularRed('broadcast')" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 8px 15px; font-family: monospace; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s;" id="btn-broadcast">BROADCAST (1 a Todos)</button>
+            <button onclick="simularRed('multicast')" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 8px 15px; font-family: monospace; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s;" id="btn-multicast">MULTICAST (1 a Grupo)</button>
+        </div>
+
+        <div style="background: #020617; border: 1px solid #1e293b; padding: 20px; border-radius: 4px; min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px; position: relative;">
+            
+            <div style="display: flex; justify-content: space-around; align-items: center;">
+                <div id="nodo-origen" style="background: #1e293b; border: 2px solid #38bdf8; padding: 8px 12px; border-radius: 4px; color: white; font-size: 0.85rem; text-align: center;">
+                    <i class="fa-solid fa-laptop"></i><br>Origen<br><span style="color: #64748b; font-size: 0.7rem;">PC-0 (192.168.1.5)</span>
+                </div>
+                
+                <div style="font-size: 1.5rem; color: #64748b;"><i class="fa-solid fa-right-left"></i></div>
+                
+                <div id="nodo-switch" style="background: #1e293b; border: 2px solid #64748b; padding: 10px 15px; border-radius: 4px; color: #cbd5e1; font-weight: bold; font-size: 0.9rem; text-align: center;">
+                    <i class="fa-solid fa-server"></i><br>Switch Central
+                </div>
+            </div>
+
+            <div style="height: 2px; background: #1e293b; width: 100%;"></div>
+
+            <div style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;">
+                <div id="pc-1" style="flex: 1; min-width: 110px; background: #0f172a; border: 1px solid #334155; padding: 8px; border-radius: 4px; color: #94a3b8; text-align: center; font-size: 0.8rem; transition: all 0.3s;">
+                    <i class="fa-solid fa-desktop"></i><br>PC-1<br><span style="font-size: 0.7rem; color: #475569;">Destino Único</span>
+                </div>
+                <div id="pc-2" style="flex: 1; min-width: 110px; background: #0f172a; border: 1px solid #334155; padding: 8px; border-radius: 4px; color: #94a3b8; text-align: center; font-size: 0.8rem; transition: all 0.3s;">
+                    <i class="fa-solid fa-desktop"></i><br>PC-2<br><span style="font-size: 0.7rem; color: #475569;">Grupo Multicast</span>
+                </div>
+                <div id="pc-3" style="flex: 1; min-width: 110px; background: #0f172a; border: 1px solid #334155; padding: 8px; border-radius: 4px; color: #94a3b8; text-align: center; font-size: 0.8rem; transition: all 0.3s;">
+                    <i class="fa-solid fa-desktop"></i><br>PC-3<br><span style="font-size: 0.7rem; color: #475569;">Grupo Multicast</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 15px; text-align: left;">
+            <div id="consola-red" style="background: #040811; color: #a7f3d0; padding: 12px; border-radius: 4px; min-height: 40px; font-size: 0.85rem; line-height: 1.4; border: 1px solid #1e293b;">
+                &gt; Selecciona un protocolo arriba para iniciar la simulación de tramas de red.
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+function simularRed(modo) {
+    // Referencias de UI
+    const pc1 = document.getElementById('pc-1');
+    const pc2 = document.getElementById('pc-2');
+    const pc3 = document.getElementById('pc-3');
+    const sw = document.getElementById('nodo-switch');
+    const consola = document.getElementById('consola-red');
+    
+    // Resetear estilos visuales previos
+    [pc1, pc2, pc3].forEach(pc => {
+        pc.style.borderColor = '#334155';
+        pc.style.background = '#0f172a';
+        pc.style.color = '#94a3b8';
+    });
+    sw.style.borderColor = '#64748b';
+    
+    // Actualizar estados de botones activos
+    ['unicast', 'broadcast', 'multicast'].forEach(m => {
+        const btn = document.getElementById(`btn-${m}`);
+        if(m === modo) {
+            btn.style.borderColor = '#38bdf8';
+            btn.style.color = '#38bdf8';
+        } else {
+            btn.style.borderColor = '#334155';
+            btn.style.color = '#cbd5e1';
+        }
+    });
+
+    // Ejecución lógica de hilos según la transmisión elegida
+    if (modo === 'unicast') {
+        sw.style.borderColor = '#38bdf8';
+        pc1.style.borderColor = '#10b981';
+        pc1.style.background = 'rgba(16, 185, 129, 0.1)';
+        pc1.style.color = '#10b981';
+        consola.innerHTML = "<span style='color: #38bdf8;'>[Unicast]</span> Tramas enviadas punto a punto desde PC-0 directas hacia la dirección MAC física de PC-1. Los demás nodos ignoran el paquete.";
+    } 
+    else if (modo === 'broadcast') {
+        sw.style.borderColor = '#eab308';
+        [pc1, pc2, pc3].forEach(pc => {
+            pc.style.borderColor = '#eab308';
+            pc.style.background = 'rgba(234, 179, 8, 0.1)';
+            pc.style.color = '#eab308';
+        });
+        consola.innerHTML = "<span style='color: #eab308;'>[Broadcast]</span> Envío masivo de uno a todos. El Switch inunda todos los puertos locales (dirección MAC FF:FF:FF:FF:FF:FF). Cada nodo conectado procesa la información de forma obligatoria.";
+    } 
+    else if (modo === 'multicast') {
+        sw.style.borderColor = '#a855f7';
+        // Solo infecta o envía al grupo configurado (PC-2 y PC-3)
+        [pc2, pc3].forEach(pc => {
+            pc.style.borderColor = '#a855f7';
+            pc.style.background = 'rgba(168, 85, 247, 0.1)';
+            pc.style.color = '#a855f7';
+        });
+        consola.innerHTML = "<span style='color: #a855f7;'>[Multicast]</span> Comunicación dirigida de uno a un grupo específico de interés. PC-2 y PC-3 pertenecen al grupo de suscripción IP, mientras que PC-1 descarta el flujo de red.";
+    }
+}
+</script>
+
+        <section class="reflection-block" style="border-left: 4px solid #38bdf8; background: #1e293b; padding: 20px; border-radius: 0 8px 8px 0; margin-top: 40px;">
+            <h3><i class="fa-solid fa-lightbulb icon-block"></i> ¿Por qué elegí este tema y dónde se aplica?</h3>
+            <p><strong>Mi perspectiva:</strong> Estudiar la infraestructura de redes me permite comprender cómo viajan los paquetes de datos a través del hardware. Configurar topologías lógicas y asegurar que los medios físicos de transmisión cumplan con los estándares internacionales es fundamental para construir cualquier plataforma de software moderna.</p>
+            <p style="margin-top: 10px;"><strong>¿Dónde se aplica?</strong> Se aplica en el despliegue de redes corporativas balanceadas, administración de arquitecturas de telecomunicaciones en centros de datos, estructuración de topologías cableadas residenciales y control operativo de servidores.</p>
+        </section>
+
+        <div class="article-navigation" style="display: flex; justify-content: space-between; margin-top: 50px; padding-top: 20px; border-top: 1px solid #334155;">
+            <a href="base-de-datos.html" class="nav-btn">&larr; Artículo Anterior (Bases de Datos)</a>
+            <a href="hardware-software.html" class="nav-btn">Siguiente Artículo (Hardware y Software) &rarr;</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            &copy; 2026 Redes y Tecnología - Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html> 

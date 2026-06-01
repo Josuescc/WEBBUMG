@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Programación y Algoritmos en Python - Redes y Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-book-open"></i> Redes y Tecnología
+        </div>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#temas" class="active">Artículos</a>
+            <a href="#">Sobre mí</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="article-container">
+        <a href="index.html" class="back-link">&larr; Volver al inicio</a>
+        
+        <h1 class="article-title">5. Introducción a la Programación: Algoritmos y Estructuras en Python</h1>
+        <p class="article-meta"><i class="fa-regular fa-calendar"></i> 31 de mayo de 2026 | <i class="fa-regular fa-folder"></i> Ciencias de la Computación</p>
+
+        <div class="article-banner" style="background: #1e293b; padding: 25px; border-radius: 8px; border-left: 5px solid #38bdf8; display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div style="flex: 1;">
+                    <p style="margin: 0; font-size: 1.1rem; line-height: 1.6;">Programar consiste en dar instrucciones claras y ordenadas a una computadora para resolver un problema. <strong>Python</strong> es un lenguaje de alto nivel, interpretado y multiparadigma, diseñado bajo una filosofía clara: hacer que el código sea sencillo, legible y accesible.</p>
+                </div>
+                <div style="font-size: 3rem; color: #38bdf8; display: flex; gap: 15px; flex-shrink: 0;">
+                    <i class="fa-brands fa-python"></i>
+                    <i class="fa-solid fa-code-branch"></i>
+                </div>
+            </div>
+
+            <div style="width: 100%; background: #0f172a; border-radius: 6px; padding: 20px; border: 1px solid #334155; margin-top: 10px; box-sizing: border-box;">
+                <div style="text-align: center; color: #38bdf8; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">
+                    <i class="fa-solid fa-laptop-code"></i> Flujo de Ejecución en un Lenguaje Interpretado
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: monospace; font-size: 0.85rem;">
+                    <div style="background: #1e293b; padding: 10px; border: 1px solid #334155; border-radius: 4px; color: #cbd5e1; text-align: center;">Código Fuente<br><span style="color: #64748b; font-size: 0.75rem;">script.py (Legible)</span></div>
+                    <div style="color: #64748b; font-size: 1.2rem;"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div style="background: #eab308; padding: 10px; border-radius: 4px; color: #0f172a; font-weight: bold; text-align: center; min-width: 120px;">Intérprete<br><span style="font-size: 0.7rem; font-weight: normal; color: #475569;">Traducción línea a línea</span></div>
+                    <div style="color: #64748b; font-size: 1.2rem;"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div style="background: #10b981; padding: 10px; border-radius: 4px; color: white; text-align: center; min-width: 110px;">Computadora<br><span style="color: #a7f3d0; font-size: 0.75rem;">Ejecuta la acción</span></div>
+                </div>
+                <span style="display: block; margin-top: 15px; font-size: 0.85rem; color: #94a3b8; text-align: center;"><i class="fa-solid fa-circle-info"></i> Esquema 1: Python no necesita compilación previa completa; el intérprete procesa el script directamente en tiempo de ejecución.</span>
+            </div>
+        </div>
+
+        <section class="content-block" style="margin-top: 40px;">
+            <h3><i class="fa-solid fa-star icon-block"></i> Características Principales del Lenguaje</h3>
+            <p>Creado por Guido van Rossum en 1991, Python se destaca en el desarrollo de software moderno gracias a una serie de propiedades estructurales clave:</p>
+            
+            <ul style="margin: 20px 0 20px 20px; color: #cbd5e1; list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #38bdf8;">
+                    <strong>Sintaxis Limpia y Legible:</strong> El código parece pseudocódigo en inglés. Para delimitar bloques de funciones o condicionales no se usan llaves `{ }`, sino la **indentación** (espaciado obligatorio), lo que fuerza a mantener el orden de forma nativa.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #10b981;">
+                    <strong>Tipado Dinámico:</strong> No es necesario declarar explícitamente si una variable es de tipo entero (`int`), texto (`string`) o decimal (`float`). Python deduce automáticamente el tipo de dato según el valor asignado.
+                </li>
+                <li style="margin-bottom: 12px; background: #0f172a; padding: 15px; border-radius: 6px; border-left: 3px solid #eab308;">
+                    <strong>Multiplataforma y Multiparadigma:</strong> Un mismo archivo funciona en Windows, Linux o macOS. Además, soporta programación imperativa, funcional y orientada a objetos de manera flexible.
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-code-fork icon-block"></i> Lógica y Control de Flujo: Condicionales</h3>
+            <p>Las computadoras toman decisiones lógicas evaluando expresiones booleanas. En Python, esto se maneja mediante las estructuras de control condicional (`if`, `elif`, `else`) y la estructura de emparejamiento estructural (`match case`):</p>
+            
+            <pre style="background: #0f172a; padding: 15px; border-radius: 6px; border: 1px solid #334155; color: #a7f3d0; font-family: monospace; font-size: 0.9rem; overflow-x: auto; margin: 15px 0;">
+# Ejemplo de toma de decisiones en Python
+nota = int(input("Ingrese la nota final: "))
+
+if nota >= 60:
+    print("Suficiente - Aprobado")
+else:
+    print("Reprobado")</pre>
+
+            <p style="margin-top: 15px;">El bloque anterior evalúa el valor numérico ingresado y altera el camino del flujo lógico según la condición establecida, bifurcando el resultado de la salida.</p>
+        </section>
+
+        <section class="content-block">
+            <h3><i class="fa-solid fa-shapes icon-block"></i> Bloques Estructurales de un Algoritmo</h3>
+            <p>Todo desarrollo algorítmico básico combina tres operaciones fundamentales en su arquitectura:</p>
+
+            <div style="display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; font-family: monospace; font-size: 0.8rem; box-sizing: border-box;">
+                <div style="flex: 1; min-width: 180px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; text-align: center; border-top: 3px solid #ef4444;">
+                    <div style="color: #ef4444; font-weight: bold; margin-bottom: 5px;"><i class="fa-solid fa-arrow-right-to-bracket"></i> Entradas (Variables)</div>
+                    <span style="color: #94a3b8;">Captura de datos mediante variables con asignación dinámica o teclado.</span>
+                </div>
+                <div style="flex: 1; min-width: 180px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; text-align: center; border-top: 3px solid #38bdf8;">
+                    <div style="color: #38bdf8; font-weight: bold; margin-bottom: 5px;"><i class="fa-solid fa-calculator"></i> Procesos (Operadores)</div>
+                    <span style="color: #94a3b8;">Cómputo aritmético, manipulación de cadenas de texto y comparaciones lógicas.</span>
+                </div>
+                <div style="flex: 1; min-width: 180px; background: #0f172a; border: 1px solid #334155; border-radius: 6px; padding: 12px; text-align: center; border-top: 3px solid #10b981;">
+                    <div style="color: #10b981; font-weight: bold; margin-bottom: 5px;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Salidas (Funciones)</div>
+                    <span style="color: #94a3b8;">Despliegue de los resultados procesados en pantalla utilizando la función `print()`.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-block" style="margin-top: 40px; text-align: center;">
+            <h3><i class="fa-solid fa-image icon-block"></i> Visualización del Algoritmo Desarrollado</h3>
+            <p>En el siguiente espacio se presenta el diagrama o captura de pantalla correspondiente a la solución lógica implementada:</p>
+            
+            <div style="width: 100%; max-width: 750px; margin: 20px auto 0 auto; border-radius: 6px; overflow: hidden; border: 1px solid #334155; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+                <img src="imagenes/python.png" alt="Estructura lógica de programación y algoritmos" style="width: 100%; height: auto; display: block;">
+                <span style="display: block; background: #0f172a; padding: 10px; font-size: 0.85rem; color: #94a3b8; text-align: center;">
+                    <i class="fa-solid fa-circle-check"></i> Captura de Pantalla: Código fuente estructurado y validación de ejecución.
+                </span>
+            </div>
+        </section>
+        <section class="content-block" style="margin-top: 40px;">
+    <h3><i class="fa-brands fa-python icon-block"></i> Herramienta Interactiva: Micro-Intérprete de Bloques Python</h3>
+    <p>Python es un lenguaje interpretado donde la computadora ejecuta instrucciones de forma secuencial y legible. Selecciona una estructura de código para ver cómo se procesa internamente y qué salida genera la terminal:</p>
+
+    <div style="background: #090d16; border: 1px solid #334155; border-radius: 6px; padding: 20px; max-width: 650px; margin: 20px auto; box-shadow: 0 10px 25px rgba(0,0,0,0.5); box-sizing: border-box; font-family: monospace;">
+        
+        <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;">
+            <button onclick="cargarScript('print')" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 8px 12px; font-family: monospace; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s;" id="btn-print">1. Función print()</button>
+            <button onclick="cargarScript('if')" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 8px 12px; font-family: monospace; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s;" id="btn-if">2. Condicional IF</button>
+            <button onclick="cargarScript('for')" style="background: #1e293b; color: #cbd5e1; border: 1px solid #334155; padding: 8px 12px; font-family: monospace; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s;" id="btn-for">3. Bucle FOR</button>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+            <div style="text-align: left;">
+                <span style="color: #64748b; font-size: 0.8rem; display: block; margin-bottom: 5px;"><i class="fa-solid fa-code"></i> SINTAXIS EN PYTHON (REVISE LA INDENTACIÓN):</span>
+                <div id="codigo-python" style="background: #020617; border: 1px solid #1e293b; padding: 15px; border-radius: 4px; color: #cbd5e1; min-height: 80px; font-size: 0.95rem; line-height: 1.5; white-space: pre; overflow-x: auto;"># Selecciona un ejemplo arriba</div>
+            </div>
+
+            <div style="text-align: right;">
+                <button id="btn-run" onclick="ejecutarPython()" style="background: #38bdf8; color: #020617; border: none; padding: 10px 22px; font-family: monospace; font-size: 0.9rem; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.2s;">
+                    <i class="fa-solid fa-play"></i> RUN SCRIPT
+                </button>
+            </div>
+
+            <div style="text-align: left;">
+                <span style="color: #10b981; font-size: 0.8rem; display: block; margin-bottom: 5px;"><i class="fa-solid fa-terminal"></i> OUTPUT DE LA CONSOLA (STDOUT):</span>
+                <div id="consola-python" style="background: #040811; border: 1px solid #1e293b; padding: 15px; border-radius: 4px; color: #34d399; min-height: 60px; font-size: 0.95rem; line-height: 1.4; text-align: left; white-space: pre-wrap;">>>> </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+// Diccionario de scripts simulados
+const scripts = {
+    print: 'print("Hola Mundo")\nprint("Estudiando Ciencias de la Computación")',
+    if: 'edad = 20\n\nif edad >= 18:\n    print("Acceso Autorizado: Mayor de edad")\nelse:\n    print("Acceso Denegado")',
+    for: 'print("Contando ciclos:")\n\nfor i in range(3):\n    print("Iteración número:", i)'
+};
+
+let scriptActivo = '';
+
+function cargarScript(tipo) {
+    scriptActivo = tipo;
+    const editor = document.getElementById('codigo-python');
+    const consola = document.getElementById('consola-python');
+    
+    // Resetear consola al cambiar de script
+    consola.innerHTML = '>>> ';
+    consola.style.color = '#34d399';
+
+    // Resaltar sintaxis visual básica mediante reemplazo HTML básico
+    let codigoLimpio = scripts[tipo];
+    let codigoResaltado = codigoLimpio
+        .replace(/(print)/g, '<span style="color: #38bdf8;">$1</span>')
+        .replace(/(if|else|for|in)/g, '<span style="color: #f43f5e; font-weight: bold;">$1</span>')
+        .replace(/(range)/g, '<span style="color: #a855f7;">$1</span>')
+        .replace(/(".*?")/g, '<span style="color: #eab308;">$1</span>')
+        .replace(/(\d+)/g, '<span style="color: #fb923c;">$1</span>');
+
+    editor.innerHTML = codigoResaltado;
+
+    // Estilos de botones activos
+    ['print', 'if', 'for'].forEach(s => {
+        const btn = document.getElementById(`btn-${s}`);
+        if(s === tipo) {
+            btn.style.background = '#1e293b';
+            btn.style.borderColor = '#38bdf8';
+            btn.style.color = '#38bdf8';
+        } else {
+            btn.style.background = '#1e293b';
+            btn.style.borderColor = '#334155';
+            btn.style.color = '#cbd5e1';
+        }
+    });
+}
+
+function ejecutarPython() {
+    const consola = document.getElementById('consola-python');
+    
+    if (!scriptActivo) {
+        consola.innerHTML = '>>> ❌ Error: Selecciona primero un ejemplo de código.';
+        consola.style.color = '#ef4444';
+        return;
+    }
+
+    consola.innerHTML = '>>> Ejecutando script...\n';
+    
+    // Simular el tiempo de respuesta del intérprete lógicamente
+    setTimeout(() => {
+        let output = '>>> ';
+        if (scriptActivo === 'print') {
+            output += 'Hola Mundo\nEstudiando Ciencias de la Computación';
+        } else if (scriptActivo === 'if') {
+            output += 'Acceso Autorizado: Mayor de edad';
+        } else if (scriptActivo === 'for') {
+            output += 'Contando ciclos:\nIteración número: 0\nIteración número: 1\nIteración número: 2';
+        }
+        consola.innerHTML = output;
+    }, 600);
+}
+
+// Cargar el primer script por defecto al iniciar la vista
+cargarScript('print');
+</script>
+
+        <section class="reflection-block" style="border-left: 4px solid #38bdf8; background: #1e293b; padding: 20px; border-radius: 0 8px 8px 0; margin-top: 40px;">
+            <h3><i class="fa-solid fa-lightbulb icon-block"></i> ¿Por qué elegí este tema y dónde se aplica?</h3>
+            <p><strong>Mi perspectiva:</strong> Estudiar lógica de programación y algoritmos expande la capacidad analítica para resolver problemas complejos de forma secuencial. Python, gracias a su facilidad de lectura, permite centrar toda la atención en diseñar soluciones eficientes sin que la sintaxis o reglas pesadas se conviertan en un obstáculo para la abstracción lógica.</p>
+            <p style="margin-top: 10px;"><strong>¿Dónde se aplica?</strong> Se aplica directamente en el desarrollo de software e ingeniería de sistemas, automatización de scripts e infraestructura en la nube, optimización de consultas avanzadas, machine learning, ciencia de datos y backend de plataformas web.</p>
+        </section>
+
+        <div class="article-navigation" style="display: flex; justify-content: space-between; margin-top: 50px; padding-top: 20px; border-top: 1px solid #334155;">
+            <a href="dispositivos-red.html" class="nav-btn">&larr; Artículo Anterior (Redes de Computadoras)</a>
+            <a href="index.html" class="nav-btn">Volver al Menú Principal &rarr;</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            &copy; 2026 Redes y Tecnología - Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+</html>
